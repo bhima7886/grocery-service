@@ -38,6 +38,7 @@ app.get(BASE_URL, (req: any, res: any) => {
 app.use(BASE_ROUTES.HEALTH_CHECK, healthCheckRouter);
 app.use(BASE_ROUTES.AUTH, authRouter);
 app.use(BASE_ROUTES.USERS,userRouter,registerRouter,profileRouter,mycartRouter,productsRouter);
+app.use(BASE_ROUTES.USERS,)
 
 
 app.use(errorHandler);

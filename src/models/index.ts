@@ -10,6 +10,7 @@ import MycartModel from './cart.model';
 import RegisterModel from './Register.model';
 import ProfileModel from './profile.model';
 import ProductsModel from './products.model';
+import crudModel from './crud.model';
 
 
 const sequelize = new Sequelize(config.DB, config.USER, config.PASSWORD, {
@@ -35,6 +36,7 @@ const db:any = {
     products:ProductsModel(sequelize,Sequelize),
     register:RegisterModel(sequelize,Sequelize),
     profile:ProfileModel(sequelize,Sequelize),
+    crud:crudModel(sequelize,Sequelize)
 };
 
 // db.role.belongsToMany(db.permission, { through: db.rolePermission });
